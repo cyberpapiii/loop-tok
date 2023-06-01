@@ -1,0 +1,1 @@
+export const randomId = () => (Math.random() * 0.97 + 0.01).toString(36).slice(2);

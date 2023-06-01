@@ -1,0 +1,6 @@
+.main {
+  background-color: var(--admin-bg);
+  color: var(--admin-fg);
+  padding: 0.5rem 1.5rem;
+  min-height: 100vh;
+}

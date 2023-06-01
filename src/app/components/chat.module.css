@@ -1,0 +1,54 @@
+.chat {
+  clear: both;
+  display: block;
+  padding-left: 1.5em;
+}
+
+.chat.chatPinned {
+  display: block;
+  color: var(--color-fg);
+  padding: var(--chat-pane-padding);
+  font-size: var(--chat-font-size);
+  border-radius: var(--chat-pane-radius);
+  background-color: var(--color-bg);
+}
+
+.profile {
+  float: left;
+  display: block;
+  background: var(--admin-bg);
+  border-radius: var(--admin-chat-radius);
+  margin-left: -1.5em;
+}
+
+.chat.chatPinned .profile {
+  background: transparent;
+}
+
+.username {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  font-size: 0.9em;
+}
+
+.chat img {
+  vertical-align: middle;
+  height: var(--chat-line-height) !important;
+  width: var(--chat-line-height) !important;
+  border-radius: 100%;
+  box-shadow: 0 0 0 2px var(--color-bar-bg);
+}
+
+.comment {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-size: var(--chat-font-size);
+  /* this line height means the second line of chat clips under the floated profile img */
+  line-height: calc(var(--chat-line-height) + 0.5px);
+  padding-left: 0.5em;
+}

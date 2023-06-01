@@ -1,0 +1,125 @@
+:root {
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+  /* Admin UI */
+  --admin-bg: #333;
+  --admin-bg-dark: #242424;
+  --admin-input-bg: #474747;
+  --admin-input-border: #9b9b9b;
+  --admin-fg: #f1f1f1;
+  --color-alert: #ffBB64;
+  --color-destructive: #ff5564;
+
+  --chat-font-size: 16px;
+  --chat-line-height: 28px;
+
+  /* OBS Visible stuff */ 
+  --color-fg: white;
+  --color-bg: rgba(0,0,0,0.25);
+  --color-bar-bg: rgba(255,255,255, 0.70);
+  --color-primary: #00AE7A;
+
+  --pane-padding: 11px 28px;
+  --pane-radius: 36px;
+  --font-size: 32px;
+  --font-weight: 700;
+  --font-size-header: 1em;
+  --text-decoration-header: 1em;
+
+  --chat-pane-padding: 10px 20px 10px calc(1.5em + 10px);
+  --chat-font-size: 17.5px;
+  --chat-pane-radius: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+label {
+  display: block;
+}
+
+input {
+  color: var(--admin-fg);
+  background: var(--admin-input-bg);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid outset;
+  border-radius: 0.4rem;
+  margin-bottom: 0.25em;
+}
+
+input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+input[type="submit"]:focus {
+  border-color: var(--color-primary);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.field {
+  display: inline-block;
+  margin-bottom: 1em;
+  vertical-align: top;
+  margin-right: 0.75em;
+}
+
+h1, h2, h3 {
+  margin: 0.25em 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  margin: 0.5em 0;
+  padding: 0.3em 0.8em;
+  border: 2px outset var(--admin-input-border);
+  border-radius: 0.5em;
+  font-size: 16px;
+  line-height: 1.333;
+  gap: 0.5em;
+  width: max-content;
+  cursor: pointer;
+  margin-right: 0.75em;
+  color: var(--admin-fg);
+  background: var(--admin-bg);
+}
+
+.button:hover {
+  color: var(--color-primary);
+  border-color: currentColor;
+}
+
+.button.button__destructive {
+  color: var(--color-destructive);
+}
+
+.button.button__destructive:hover {
+  color: var(--admin-fg);
+  background: var(--color-destructive);
+}
