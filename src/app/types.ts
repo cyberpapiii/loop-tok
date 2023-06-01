@@ -9,6 +9,7 @@ export interface BasicMeter {
 }
 
 export interface TiktokChat {
+  profilePictureUrl: string;
   uniqueId: string;
   comment: string;
 }
