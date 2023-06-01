@@ -8,7 +8,8 @@ const Chat: FC<{chat: TiktokChat, pinned?: boolean}> = ({
 }) => {
   return <div className={styles.chat + ` ${pinned ? styles.chatPinned : ''}`}>
     <div className={styles.profile}>
-      <img src={chat.profilePictureUrl.replace(/^https:/, 'http:')} height={28} width={28} />
+     <img src={chat.profilePictureUrl ? chat.profilePictureUrl.replace(/^https:/, 'http:') : 'default-image-url'} height={28} width={28} />
+
       <div className={styles.username}>{pinned ? '@' : ''}{chat.uniqueId}{pinned ? ':' : ''}</div>
     </div>
     <p className={styles.comment}>{chat.comment}</p>
